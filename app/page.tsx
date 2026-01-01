@@ -30,7 +30,7 @@ export default function Home() {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [feedback, setFeedback] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
-  const feedbackTimeout = useRef<NodeJS.Timeout>();
+  const feedbackTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Initialize board
   useEffect(() => {
